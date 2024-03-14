@@ -3,11 +3,7 @@ name: "Test Integration"
 on:
   merge_group:
   push:
-    paths-ignore:
-      - "**.md"
   pull_request:
-    paths-ignore:
-      - "**.md"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
