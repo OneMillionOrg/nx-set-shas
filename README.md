@@ -3,7 +3,7 @@ width="100%" alt="Nx - Smart, Extensible Build Framework"></p>
 
 <h1 align="center">Set SHAs Action</h2>
 
-✨ A Github Action which sets the base and head SHAs required for the `nx affected` commands in CI
+✨ A Github Action which sets the base and head SHAs required for the `nx affected` commands in CIe
 
 - [Example Usage](#example-usage)
 - [Configuration Options](#configuration-options)
