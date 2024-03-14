@@ -197,6 +197,7 @@ async function findMergeBaseRef(): Promise<string> {
 
 function findMergeQueuePr(): string {
   const { head_ref, base_sha } = github.context.payload.merge_group;
+  console.log({ head_ref, base_sha })
   const result = new RegExp(
     `^refs/heads/gh-readonly-queue/${mainBranchName}/pr-(\\d+)-${base_sha}$`
   ).exec(head_ref);
