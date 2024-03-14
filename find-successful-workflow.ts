@@ -39,6 +39,8 @@ let BASE_SHA: string;
   });
   const HEAD_SHA = headResult.stdout;
 
+  console.log({ eventName })
+
   if (
     (["pull_request", "pull_request_target"].includes(eventName) &&
       !github.context.payload.pull_request.merged) ||
