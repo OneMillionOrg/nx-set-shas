@@ -39,7 +39,8 @@ let BASE_SHA: string;
   });
   const HEAD_SHA = headResult.stdout;
 
-  process.stdout.write(eventName)
+  process.stdout.write(eventName);
+  process.stdout.write("\n");
 
   if (
     (["pull_request", "pull_request_target"].includes(eventName) &&
@@ -199,10 +200,14 @@ async function findMergeBaseRef(): Promise<string> {
 
 function findMergeQueuePr(): string {
   const { head_ref, base_sha } = github.context.payload.merge_group;
-  process.stdout.write("Head")
-  process.stdout.write(head_ref)
-  process.stdout.write("Base")
-  process.stdout.write(base_sha)
+  process.stdout.write("Head");
+  process.stdout.write("\n");
+  process.stdout.write(head_ref);
+  process.stdout.write("\n");
+  process.stdout.write("Base");
+  process.stdout.write("\n");
+  process.stdout.write(base_sha);
+  process.stdout.write("\n");
   const result = new RegExp(
     `^refs/heads/gh-readonly-queue/${mainBranchName}/pr-(\\d+)-${base_sha}$`
   ).exec(head_ref);
