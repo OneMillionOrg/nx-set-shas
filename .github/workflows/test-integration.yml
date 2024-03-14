@@ -1,6 +1,7 @@
 name: "Test Integration"
 
 on:
+  merge_group:
   push:
     paths-ignore:
       - "**.md"
